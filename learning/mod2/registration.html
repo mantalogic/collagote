@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Form</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="arif setyawan">
+        
+        <link href="http://learning/bootstrap/css/bootstrap.css" rel="stylesheet" />
+        <link href="http://learning/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+        <link href="mod.css" rel="stylesheet" />
+        <script src="http://learning/bootstrap/js/jquery.min.js"></script>
+        <script src="registration.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12 wrapper">
+                    <div class="row-fluid">
+                        <form class="form" name="regForm" action="register.php" method="get" enctype="multipart/data" onsubmit="return validateForm()" />
+
+                        <div class="span4 left">
+                            <div class="control-group">
+                                <label class="control-label" for="inputNamaDepan">Nama Depan</label>
+                                <div class="controls">
+                                    <input type="text" id="inputNamaDepan" placeholder="Nama Depan" name="nama_depan" required="required" class="span12">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="inputNamaBelakang">Nama Belakang</label>
+                                <div class="controls">
+                                    <input type="text" id="inputNamaBelakang" placeholder="Nama Belakang" name="nama_belakang" required="required" class="span12">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="inputTanggalLahir">Tanggal Lahir</label>
+                                <div class="controls">
+                                    <input type="date" id="inputTanggalLahirDumy" placeholder="Tanggal Lahir" name="tanggal_lahir_dumy" required="required" class="span12" onblur="setDate();" />
+                                    <input type="hidden" id="inputTanggalLahir" name="tanggal_lahir" />
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label" for="inputGender">Gender</label>
+                                <div class="controls">
+                                    <label class="radio">
+                                        <input type="radio" id="inputGender" name="jk" value="pria"/> Pria
+                                    </label>
+                                    <label class="radio">
+                                        <input type="radio" id="inputGender" name="jk" value="wanita"/> Wanita
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="inputAlamat">Alamat</label>
+                                <div class="controls">
+                                    <select name="kota" class="span4">
+                                      <option>Balikpapan</option>
+                                      <option>Surabaya</option>
+                                      <option>Malang</option>
+                                      <option>Ngawi</option>
+                                      <option>Bandung</option>
+                                    </select>
+                                    <select name="propinsi" class="span4">
+                                      <option>Kalimantan Timur</option>
+                                      <option>Jawa Timur</option>
+                                      <option>Jawa Tengah</option>
+                                      <option>Jawa Barat</option>
+                                      <option>Kalimantan Selatan</option>
+                                    </select>
+                                    <select name="negara" class="span4">
+                                      <option>Indonesia</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span4 right">
+                            <div class="control-group">
+                                <label class="control-label" for="inputEmail">Email</label>
+                                <div class="controls">
+                                    <input type="email" id="inputEmail" placeholder="Email" name="email" required="required" class="span12">
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <label class="control-label" for="inputPasseword">Password</label>
+                                <div class="controls">
+                                    <input type="password" id="inputPassword" placeholder="Password" name="password" required="required" class="span12">
+                                </div>
+                                <div class="controls">
+                                    <input type="password" id="inputPassword" placeholder="Confirm Password" name="cpassword" required="required" class="span12" onfocus="validatePass(document.getElementById('inputPassword'), this);" oninput="validatePass(document.getElementById('inputPassword'), this);">
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="control-label" for="inputProfile">Password</label>
+                                <div class="controls">
+                                    <textarea id="inputProfile" name="profile" required="required" class="span12"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <input type="submit" value="submit" class="btn btn-primary" />
+                                <input type="reset" value="reset" class="btn" />
+                            </div>
+
+                        </div>
+                        <div class="span4">
+                            <h3>Warning</h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+
+                        </form>
+                    </div>
+                <div>
+            </div>
+            
+        </div>
+        
+        <script src="http://learning/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

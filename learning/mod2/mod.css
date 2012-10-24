@@ -1,0 +1,25 @@
+body{
+	margin:0;
+	padding:0;
+	font-size:13px;
+}
+
+.container-fluid{
+	margin-top:2em;
+}
+
+.wrapper{
+	padding:1em;
+	background:#f2f2f2;
+	text-shadow:0 1px 0 #fff;
+}
+
+.control-label, label{
+	font-size:13px;
+}
+
+.control-label{	font-weight:bold;}
+
+.controls input, .controls textarea, .controls{
+	font-size:13px;
+}

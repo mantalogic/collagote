@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+
+<html>
+    <!-- first big element : untuk metadata atau utilisasi source -->
+    <head>
+        <title>arif setyawan</title>
+        <style>
+            /*untuk internal css*/
+        </style>
+        
+        <!-- untuk external -->
+        <link href='style.css' rel='stylesheet'/>
+        
+    </head>
+    
+    <!-- second big element : untuk view and apps -->
+    <body>
+        
+        <table border=1>
+            <thead>
+                <tr>
+                    <th>Judul</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Test</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="container" id="container">
+            <div class="wrapper">
+                <h2>Login Form</h2>
+                
+                <!--
+                
+                    Web communication HTTP
+                    POST -> hidden
+                    GET  -> visible di url / address bar
+                    REQ  -> keduanya
+                
+                 -->
+                
+                <form action="http://localhost/learning/interaction.php" method="post">
+                    username
+                    <input type="text" name="username" />
+                    password
+                    <input type="password" name="password"/>
+                    
+                    <input type="submit" value="submit">
+                    <input type="submit" id="tbl2" onclick="return false" value="submit2">
+                    <input type="button" value="cancel" onclick="">
+                </form>
+                
+            </div>
+        </div>
+    </body>
+
+</html>

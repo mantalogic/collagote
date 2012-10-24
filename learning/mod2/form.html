@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Web Form</title>
+        <link href="style.css" rel="stylesheet">
+        <script src="form.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="wrapper">
+                <form name="loginForm" action="login.php" method="post" enctype="multipart/data" onsubmit="return validateForm()">
+                    
+                    <div class="control">
+                        <div class="control-label">
+                            <label>Username</label>
+                        </div>
+                        <div class="control-content">
+                            <input type="text" name="username" value="" placeholder="Username Here" />
+                        </div>
+                    </div>
+                    <div class="control">
+                        <div class="control-label">
+                            <label>Password</label>
+                        </div>
+                        <div class="control-content">
+                            <input type="password" name="password" value="" placeholder="Password Here" />
+                        </div>
+                    </div>
+                    <div class="control action">
+                        <input type="submit" value="submit" />
+                        <input type="reset" value="reset" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
