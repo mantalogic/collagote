@@ -17,7 +17,7 @@
     include 'util.php'; 
     
     $c = add(2,3);
-    $d = multiply(4);
+    $d = multiply(4,50);
     
     /*for($i=0;$i<10;$++){
         
@@ -27,8 +27,8 @@
         
     }*/
     
-    foreach($arr2 as $kunci => $nilai){
-        echo $nilai;
+    foreach($arr2 as $joko => $yuk){
+        echo $yuk;
     }
     
 ?>
