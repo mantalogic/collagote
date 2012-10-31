@@ -2,16 +2,25 @@
 
 define('BASE','collagote/learning/php');
 
-function getContent(){
+function getUriElement($depth=1){
+    // php function to get information about request
     $uri = $_SERVER['REQUEST_URI'];
     
     // memisahkan uri berdasarkan (/) 
     $token = explode('/',$uri);
     $base_token = explode('/', constant('BASE'));
-    $token = $token[sizeof($base_token)+1];
+    $token = $token[sizeof($base_token)+$depth];
     
     // memisahkan token berdasar extensi
-    $arr_uri = explode('.',$token);
+    $dest = explode('.',$token);
+    
+    return $dest;
+}
+
+
+function getContent($depth=1){
+    
+    $arr_uri = getUriElement();
     
     if(count($arr_uri) == 2 or count($arr_uri) == 1){
         $uri_name = $arr_uri[0].".php";
