@@ -1,15 +1,15 @@
 <?php
 
-define('BASE','learning/php');
+define('BASE','collagote/learning/php');
 
 function getContent(){
     $uri = $_SERVER['REQUEST_URI'];
-    echo $uri."<br/>";
+    
     // memisahkan uri berdasarkan (/) 
     $token = explode('/',$uri);
     $base_token = explode('/', constant('BASE'));
-    print_r($base_token);
     $token = $token[sizeof($base_token)+1];
+    
     // memisahkan token berdasar extensi
     $arr_uri = explode('.',$token);
     
@@ -35,6 +35,14 @@ function checkUrlFiles($file){
         } else {
             return false;
         }
+}
+
+function connectToMysql(){
+    $db_addr = "localhost";
+    $db_user = "root";
+    $db_pass = "toor";
+    $con=mysql_connect($db_addr,$db_user,$db_pass) or die ("koneksi dengan database gagal");
+    mysql_select_db("employees",$con) or die ("database tidak ada");
 }
 
 
