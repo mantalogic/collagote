@@ -8,26 +8,24 @@ function getUriElement($depth=1){
     
     // memisahkan uri berdasarkan (/) 
     $token = explode('/',$uri);
-    var_dump($token); echo "<br/>";
-    
     $base_token = explode('/', constant('BASE'));
-    
+    var_dump($token); echo "<br/>";
     $token = $token[sizeof($base_token)+$depth];
     
     // memisahkan token berdasar extensi
     $dest = explode('.',$token);
     
-    return $dest; // return array('about','php')
+    return $dest;
 }
 
 
 function getContent($depth=1){
     
-    $arr_uri = getUriElement(); // contoh hasil = about; $arr_uri=array('about','php')
+    $arr_uri = getUriElement();
     
     if(count($arr_uri) == 2 or count($arr_uri) == 1){
         $uri_name = $arr_uri[0].".php";
-        $uri_subfix = $arr_uri[1]; // <-- ignore it
+        $uri_subfix = $arr_uri[1];
         if(checkUrlFiles($uri_name)){
             include 'content/'.$uri_name;
         } else if(empty($token)) {
@@ -50,15 +48,11 @@ function checkUrlFiles($file){
 }
 
 function connectToMysql(){
-    
     $db_addr = "localhost";
     $db_user = "root";
     $db_pass = "toor";
-    
-    // part to connect with mysql
     $con=mysql_connect($db_addr,$db_user,$db_pass) or die ("koneksi dengan database gagal");
     mysql_select_db("employees",$con) or die ("database tidak ada");
-
 }
 
 

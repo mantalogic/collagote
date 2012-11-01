@@ -16,9 +16,7 @@
     if($request == null){
         //get connected first
         connectToMysql();
-        
         $result = mysql_query("SELECT * FROM employees ORDER BY emp_no ASC LIMIT 20");
-
         $iterate = 0;
         echo "<table class='table table-bordered'>";
         while($data = mysql_fetch_array($result)){
